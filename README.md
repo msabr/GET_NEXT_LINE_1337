@@ -16,9 +16,3 @@ In this project, you will:
 - Understanding and working with **static variables**.  
 - Improving skills in **memory management** (allocating, freeing, and avoiding leaks).  
 - Gaining experience with **edge cases** (empty files, newlines, large files, etc.).  
-
-## **Usage**  
-To compile and use **get_next_line**, run:  
-
-```sh
-make
