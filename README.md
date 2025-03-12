@@ -1,18 +1,60 @@
 # **get_next_line - 42 Network**  
 
 ## **Overview**  
-Reading content **line by line** is a fundamental operation in many programming tasks, whether dealing with **files, standard input (stdin), or network connections**. The **get_next_line** project challenges you to create a function that efficiently reads and returns one line at a time from a given file descriptor. This function will be a crucial tool for future projects.  
+Get Next Line delivers a function, `get_next_line()`, that retrieves a line from a file descriptor. It’s divided into two parts:
+- **Mandatory Part**: A single function to read lines sequentially from a file descriptor or standard input.
+- **Bonus Part**: Enhanced version supporting multiple file descriptors simultaneously with a single static variable.
 
-## **Project Scope**  
-In this project, you will:  
+### Key Features
 
-- Implement a function that reads and returns a single line from a **file descriptor**.  
-- Manage **buffered reading** efficiently to optimize performance.  
-- Handle **multiple file descriptors** simultaneously.  
-- Properly manage **memory allocation** and **freeing** to avoid leaks.  
+- Returns a line ending with `\n` (unless EOF is reached without it).
+- Handles both file input and standard input efficiently.
+- Uses static variables for state persistence across calls.
+- Bonus: manages multiple file descriptors without mixing their reading threads.
 
-## **Learning Outcomes**  
-- Deepening knowledge of **file handling** and **buffer management** in C.  
-- Understanding and working with **static variables**.  
-- Improving skills in **memory management** (allocating, freeing, and avoiding leaks).  
-- Gaining experience with **edge cases** (empty files, newlines, large files, etc.).  
+### Restrictions
+
+- Written in C, adhering to the 42 Norm.
+- No unexpected crashes (e.g., segmentation faults).
+- No memory leaks from heap allocations.
+- Compiled with `-Wall -Wextra -Werror` and `-D BUFFER_SIZE=n` (e.g., 42).
+- No use of `libft`, `lseek()`, or global variables.
+
+## Getting Started
+
+### Prerequisites
+
+- C compiler (e.g., `clang` or `gcc`).
+- `make` utility.
+
+### How to Build and Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/LuizGandra/get-next-line-42.git
+   cd get-next-line-42
+
+2. Build the mandatory part:
+
+   ```bash
+   clang -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
+
+3. Build the bonus part (optional, separately):
+
+   ```bash
+   clang -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_bonus.c get_next_line_utils_bonus.c -o gnl_bonus
+
+4. Run with a file or standard input:
+
+   ```bash
+   ./gnl <file>
+
+## Project Structure
+
+- `get_next_line.h`: function prototype for mandatory part.
+- `get_next_line.c`: main function source.
+- `get_next_line_utils.c`: helper functions.
+- `get_next_line_bonus.h`: bonus function prototype.
+- `get_next_line_bonus.c`: bonus main source.
+- `get_next_line_utils_bonus.c`: bonus helper functions.
