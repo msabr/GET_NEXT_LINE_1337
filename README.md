@@ -32,23 +32,23 @@ Get Next Line delivers a function, `get_next_line()`, that retrieves a line from
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/LuizGandra/get-next-line-42.git
-   cd get-next-line-42
+   git clone https://github.com/msabr/GET_NEXT_LINE_1337
+   cd GET_NEXT_LINE_1337
 
 2. Build the mandatory part:
 
    ```bash
-   clang -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
+   cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c
 
 3. Build the bonus part (optional, separately):
 
    ```bash
-   clang -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_bonus.c get_next_line_utils_bonus.c -o gnl_bonus
+   cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_bonus.c get_next_line_utils_bonus.c
 
 4. Run with a file or standard input:
 
    ```bash
-   ./gnl <file>
+   ./a.out <file>
 
 ## Project Structure
 
