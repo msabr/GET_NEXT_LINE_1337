@@ -1,4 +1,7 @@
 # **get_next_line - 42 Network**  
+<div align="center">
+<img src="get_next_line.png"/>
+</div>
 
 ## **Overview**  
 Get Next Line delivers a function, `get_next_line()`, that retrieves a line from a file descriptor. It’s divided into two parts:
